@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan - Laundry Kilat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">✨ Laundry Kilat</div>
+        <ul class="nav-links">
+                <li><a href="index.html" class="active-btn">Beranda</a></li>
+                <li><a href="form-pemesanan.html" class="active-btn">Form Pemesanan</a></li>
+        </ul>
+    </nav>
+
+    <section class="form-wrapper">
+        <form id="laundryForm" class="order-form">
+            <div class="form-header">
+                <h3>Formulir Pemesanan</h3>
+                <p>Silakan isi data diri Anda untuk melakukan pemesanan.</p>
+            </div>
+            
+            <div class="input-group">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+            </div>
+
+            <div class="input-group">
+                <label for="whatsapp">Nomor WhatsApp:</label>
+                <input type="number" id="whatsapp" name="whatsapp" placeholder="Contoh: 08123456789" required>
+            </div>
+
+            <div class="input-group">
+                <label>Pilih Jenis Layanan:</label>
+                <div class="radio-box">
+                    <input type="radio" name="layanan" id="komplit" value="Cuci Komplit" required>
+                    <label for="komplit"><strong>Cuci Komplit</strong><br><span>Pencucian reguler menyeluruh</span></label>
+                </div>
+                <div class="radio-box">
+                    <input type="radio" name="layanan" id="express" value="Express 3 Jam">
+                    <label for="express"><strong>Express 3 Jam</strong><br><span>Pengerjaan kilat selesai dalam 3 jam</span></label>
+                </div>
+            </div>
+
+            <button type="submit" class="cta-button submit-btn">Kirim Pesanan</button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById('laundryForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            const nama = document.getElementById('nama').value;
+            alert('Terima kasih ' + nama + '! Pesanan Anda berhasil dikirim.');
+            this.reset(); 
+        });
+    </script>
+</body>
+</html>

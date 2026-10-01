@@ -1,0 +1,337 @@
+:root {
+    --primary-blue: #007BFF;
+    --secondary-blue: #e7f1ff;
+    --accent-color: #FF9800;
+    --text-dark: #2C3E50;
+    --text-light: #FFFFFF;
+    --font-main: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: #f8faff;
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+/* Navigasi */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--text-light);
+    padding: 20px 8%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+/* Tautan Menu Biasa */
+.nav-links a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+    padding: 8px 15px;
+}
+
+.nav-links a:hover {
+    color: var(--primary-blue);
+}
+
+/* Tombol Aktif (Berbentuk Tombol Biru Pill) */
+.nav-links a.active-btn {
+    background-color: var(--primary-blue);
+    color: var(--text-light) !important;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a.active-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Homepage Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 8%;
+    background: linear-gradient(135deg, var(--secondary-blue) 0%, #ffffff 100%);
+    min-height: 80vh;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: var(--primary-blue);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+    color: #555;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    max-width: 90%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Tentang Kami */
+.about-section {
+    padding: 80px 8%;
+    background-color: var(--text-light);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    color: var(--primary-blue);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.about-img {
+    flex: 1;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.detail-section {
+    padding: 50px 8%;
+    background-color: #f8faff;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background-color: var(--text-light);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid #f0f0f0;
+}
+
+.detail-card {
+    text-align: left;
+}
+
+.warning-card {
+    border-left: 4px solid var(--accent-color);
+}
+
+.custom-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.custom-list li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.custom-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+/* Formulir Pemesanan */
+.form-wrapper {
+    padding: 80px 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #f8faff;
+}
+
+.order-form {
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid #eee;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-header h3 {
+    color: var(--primary-blue);
+    font-size: 2rem;
+}
+
+.form-header p {
+    color: #666;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.input-group input[type="text"],
+.input-group input[type="number"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+.radio-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.radio-box:hover {
+    border-color: var(--primary-blue);
+    background-color: var(--secondary-blue);
+}
+
+.radio-box input[type="radio"] {
+    margin-top: 5px;
+}
+
+.radio-box span {
+    font-size: 0.85rem;
+    color: #777;
+    display: block;
+    margin-top: 5px;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Media Query (Mobile Responsive) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .hero-section, .about-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 5%;
+    }
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 50px;
+    }
+    .about-img {
+        max-width: 100%;
+    }
+    .order-form {
+        padding: 30px 20px;
+    }
+}
