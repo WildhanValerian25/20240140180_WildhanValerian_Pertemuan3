@@ -8,14 +8,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigasi -->
     <nav class="navbar">
         <div class="logo">✨ Laundry Kilat</div>
         <ul class="nav-links">
-                <li><a href="index.html" class="active-btn">Beranda</a></li>
-                <li><a href="form-pemesanan.html" class="active-btn">Form Pemesanan</a></li>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="form-pemesanan.html" class="active-btn">Form Pemesanan</a></li>
         </ul>
     </nav>
 
+    <!-- KHUSUS Formulir Pemesanan Saja -->
     <section class="form-wrapper">
         <form id="laundryForm" class="order-form">
             <div class="form-header">
@@ -49,6 +51,7 @@
         </form>
     </section>
 
+    <!-- Script pop-up berhasil -->
     <script>
         document.getElementById('laundryForm').addEventListener('submit', function(event) {
             event.preventDefault(); 

@@ -335,3 +335,25 @@ body {
         padding: 30px 20px;
     }
 }
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    .hero-section, .about-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    .about-img {
+        max-width: 100%;
+    }
+    .order-form {
+        padding: 30px 20px;
+    }
+}
